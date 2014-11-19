@@ -1,6 +1,7 @@
-.messages {
+.messages, .reader {
   display: inline-block;
   width: 400px;
+  vertical-align: top;
 }
 
 .messages .message {

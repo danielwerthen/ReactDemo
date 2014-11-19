@@ -1,13 +1,32 @@
 var React = require('react'),
     Emails = require('./emails'),
+    Reader = require('./email-reader'),
     messages = [
-      { from: 'Richard', subject: 'Lorem hello' },
-      { from: 'Boomer', subject: 'Lorem hello' },
-      { from: 'Sara', subject: 'Lorem hello' },
-      { from: 'Anne', subject: 'Lorem hello' }
-    ];
+      { from: 'Richard', subject: 'Fine day today', body: 'Is it not?' },
+      { from: 'Boomer', subject: 'Do you have time?', body: 'I would like to meet' },
+      { from: 'Sara', subject: 'Request for more info', body: 'How are you' },
+      { from: 'Anne', subject: 'Message update', body: 'This has happened' }
+    ],
+    message = null;
 
-React.render(
-  <Emails messages={messages} />,
+var Controller = React.createClass({
+  getInitialState: function () {
+    return {
+      messages: messages,
+      message: null
+    };
+  },
+  onOpen: function (id) {
+    this.setState({ message: messages[id] });
+  },
+  render: function () {
+    return <div>
+      <Emails messages={this.state.messages} onOpen={this.onOpen} />
+      <Reader message={this.state.message} />
+    </div>;
+  }
+});
+
+React.render(<Controller/>,
   document.getElementById('container')
 );
