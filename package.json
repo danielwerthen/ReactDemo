@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "beefy js/app.js --live --debug"
+    "watch": "beefy js/app.js --open --live --debug -- -t reactify"
   },
   "repository": {
     "type": "git",

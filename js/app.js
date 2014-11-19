@@ -1,1 +1,13 @@
-console.log('beefy2');
+var React = require('react');
+
+var Hello = React.createClass({
+
+  render: function() {
+    return <div>Hello, {this.props.name}!</div>;
+  }
+});
+
+React.render(
+  <Hello name="World" />,
+  document.getElementsByTagName('body')[0]
+);
