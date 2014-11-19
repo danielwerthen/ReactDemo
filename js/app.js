@@ -1,13 +1,13 @@
-var React = require('react');
-
-var Hello = React.createClass({
-
-  render: function() {
-    return <div>Hello, {this.props.name}!</div>;
-  }
-});
+var React = require('react'),
+    Emails = require('./emails'),
+    messages = [
+      { from: 'Richard', subject: 'Lorem hello' },
+      { from: 'Boomer', subject: 'Lorem hello' },
+      { from: 'Sara', subject: 'Lorem hello' },
+      { from: 'Anne', subject: 'Lorem hello' }
+    ];
 
 React.render(
-  <Hello name="World" />,
-  document.getElementsByTagName('body')[0]
+  <Emails messages={messages} />,
+  document.getElementById('container')
 );
