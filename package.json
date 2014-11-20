@@ -1,0 +1,31 @@
+{
+  "name": "ReactDemo",
+  "version": "0.0.0",
+  "description": "ReactDemo =========",
+  "main": "js/app.js",
+  "dependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^6.3.2",
+    "flux": "^2.0.1",
+    "lodash": "^2.4.1",
+    "object-assign": "^1.0.0",
+    "react": "^0.12.1",
+    "reactify": "^0.17.0",
+    "watchify": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "beefy js/app.js:out/app.js --open --live --debug -- -t reactify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielwerthen/ReactDemo.git"
+  },
+  "author": "Daniel Werthén daniel.werthen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielwerthen/ReactDemo/issues"
+  },
+  "homepage": "https://github.com/danielwerthen/ReactDemo"
+}
